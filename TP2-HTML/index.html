@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulario de carga de datos</h1>
+    <form action="" method="get" id="miFormulario">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="name" placeholder="Ingresa tu nombre">
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="name2" placeholder="Ingresa tu apellido">
+        <br>
+        <br>
+        <label for="num">DNI</label>
+        <input type="number" id="dni" name="dni">
+        <label for="fecha">Fecha de nacimiento</label>
+        <input type="date" id="fecha" name="fecha">
+        <br>
+        <br>
+        <label for="domicilio">Domicilio</label>
+        <input type="text" id="domicilio" name="domicilio">
+        <br>
+        <br>
+        <label for="localidad">Localidad</label>
+        <input type="text" id="localidad" name="localidad">
+        <br>
+        <br>
+        <label for="seleccion">Selecciona que lenguaje es el que más te interesa</label>
+        <br>
+        <br>
+        <select name="seleccion" id="selection">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+        </select> 
+        <br>
+        <h3>Idiomas que conoce</h3>
+        <input type="checkbox" name="gender" id="gender"> Inglés
+        <input type="checkbox" name="gender" id="gender"> Francés
+        <input type="checkbox" name="gender" id="gender"> Alemán
+        <input type="checkbox" name="gender" id="gender"> Español
+        <input type="checkbox" name="gender" id="gender"> Chino
+        <h3>Lenguajes que conoces</h3>
+        <input type="checkbox" name="html" id="languaje"> HTML
+        <input type="checkbox" name="css" id="languaje"> CSS
+        <input type="checkbox" name="javascript" id="languaje"> JavaScript
+        <h4>Botones de acción</h4>
+        <input type="submit" value="Enviar" id="submit">
+        <input type="reset" value="Borrar todo">
+    </form>
+
+    <script>
+        const formulario = document.getElementById('miFormulario');
+        formulario.addEventListener('submit', function(event) {
+
+            // Obtener los valores de los campos de entrada
+            const nombre = document.getElementById('nombre').value;
+            const apellido = document.getElementById('apellido').value;
+            const numero = document.getElementById('num').value;
+            const url = document.getElementById('url').value;
+            const password = document.getElementById('password').value;
+            const selection = document.getElementById('seleccion').value.checked;
+            const gender = document.getElementById('gender').value;
+            const languaje = document.getElementById('languaje').value;
+        });
+    </script>
+
+</body>
+</html>
